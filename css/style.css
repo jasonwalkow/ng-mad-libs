@@ -1,0 +1,114 @@
+html {
+	font-family: sans-serif;
+	box-sizing: border-box;
+	background-color: #D24940;
+}
+
+body {
+	text-align: center;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+button {
+	padding: 1rem;
+	background-color: #DE3B30;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	margin: 2rem auto 1rem auto;
+}
+
+button:hover {
+	opacity: 0.9;
+}
+
+header {
+	width: 80%;
+	margin: 1rem 10% 1rem 10%;
+	border-radius: 5px;
+	padding: 1rem;
+	background-color: #fff;
+}
+
+.smiley-box {
+	display: inline-block;
+}
+
+.smiley {
+	width: 150px;
+	padding-left: 1rem;
+	padding-top: 1rem;
+}
+
+.logo-box {
+	top: 0;
+	display: inline-block;
+	text-align: center;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 0;
+}
+
+.logo {
+	width: 500px;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-top: 0;
+}
+
+.mad-libs-form {
+	clear: both;
+	width: 80%;
+	margin: 0 10% 0 10%;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 1rem;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 0;
+}
+
+.column {
+	display: inline-block;
+	width: 20%;
+	padding: 2rem;
+	margin-left: 0;
+}
+
+input {
+	padding: 0.5rem;
+	border-radius: 3px;
+	margin-top: 1rem;
+	font-size: 1rem;
+	text-align: center;
+}
+
+input:focus {
+  	border: solid 3px #D24940;
+}
+
+.mad-libs-text {
+	width: 80%;
+	margin: 1rem 10% 1rem 10%;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 1rem;
+}
+
+.mad-libs-text p {
+	padding: 1rem 1rem 0 1rem;
+	text-align: left;
+}
+
+
+

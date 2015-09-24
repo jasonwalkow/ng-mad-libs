@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+	<meta charset="UTF-8">
+	<title>ngMadLibs</title>
+	<link href="css/style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-animate.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+	<header>
+		<div class="smiley-box">
+			<img src="img/mad-lib-happy-face.png" class="smiley" alt="Smiley Face">
+		</div>
+		<div class="logo-box">
+			<img src="img/ng-mad-libs-logo.png" class="logo" alt="ng Mad Libs Logo">
+			<h1>Automate This!</h1>
+		</div>
+	</header>
+	<section class="mad-libs-form">
+		<h2>Provide the following words:</h2>
+		<form name="madForm">
+		<div class="column">
+			<input type="text" placeholder="Male Name" name="male_name" ng-model="male_name" required>
+			<input type="text" placeholder="Job Title" name="job_title" ng-model="job_title" required>
+			<input type="text" placeholder="Tedious Task" name="tedious_task" ng-model="tedious_task" required>
+		</div>
+		<div class="column">
+			<input type="text" placeholder="Dirty Task" name="dirty_task" ng-model="dirty_task" required>
+			<input type="text" placeholder="Celebrity" name="celebrity" ng-model="celebrity" required>
+			<input type="text" placeholder="Useless Skill" name="useless_skill" ng-model="useless_skill" required>
+		</div>
+		<div class="column">
+			<input type="text" placeholder="Obnoxious Celebrity" name="obnoxious_celebrity" ng-model="obnoxious_celebrity" required>
+			<input type="number" placeholder="Huge Number" name="huge_number" ng-model="huge_number" required>
+			<input type="text" placeholder="Adjective" name="adjective" ng-model="adjective" required>
+		</div>
+		<div class="submit">
+			<button name="madForm" type="submit">Generate My MadLib</button>
+		</div>
+		</form>
+	</section>
+	<section class="mad-libs-text">
+		<p>{{male_name}} was a {{job_title}} who loved technology. Although he loved parts of his job, he absolutely hated {{tedious_task}} and {{dirty_task}}. So, {{male_name}} met with his life mentor {{celebrity}} who told him to learn how to {{useless_skill}} with Thinkful. Thinkful didn't offer a course on {{useless_skill}} so he studied programming instead.</p>
+        <p>What a great decision! With his new skills, {{male_name}} built a(n) {{adjective}} robot named {{obnoxiuous_celebrity}} that not only loved {{dirty_task}} but did it {{huge_number}} times faster.</p>
+        <button name="reset" type="submit">Start Over</button>
+	</section>
+</body>
+</html>
