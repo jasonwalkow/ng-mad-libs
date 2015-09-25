@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="madLibsApp">
 <head>
 	<meta charset="UTF-8">
 	<title>ngMadLibs</title>
+	<link href='https://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body ng-controller="MyCtrl">
@@ -16,10 +17,13 @@
 		</div>
 	</header>
 	<section class="mad-libs-form">
+		<button class="gender" ng-click="gender(input)">Toggle Gender</button>
+		<br>
+		<span class="gender-title">Gender: {{gender_title}}</span>
 		<h2>Provide the following words:</h2>
 		<form name="madForm">
 		<div class="column">
-			<input type="text" placeholder="Male Name" name="male_name" ng-model="male_name" required>
+			<input type="text" placeholder="Name" name="Name" ng-model="Name" required>
 			<input type="text" placeholder="Job Title" name="job_title" ng-model="job_title" required>
 			<input type="text" placeholder="Tedious Task" name="tedious_task" ng-model="tedious_task" required>
 		</div>
@@ -39,8 +43,8 @@
 		</form>
 	</section>
 	<section class="mad-libs-text">
-		<p>{{male_name}} was a {{job_title}} who loved technology. Although he loved parts of his job, he absolutely hated {{tedious_task}} and {{dirty_task}}. So, {{male_name}} met with his life mentor {{celebrity}} who told him to learn how to {{useless_skill}} with Thinkful. Thinkful didn't offer a course on {{useless_skill}} so he studied programming instead.</p>
-        <p>What a great decision! With his new skills, {{male_name}} built a(n) {{adjective}} robot named {{obnoxiuous_celebrity}} that not only loved {{dirty_task}} but did it {{huge_number}} times faster.</p>
+		<p>{{Name}} was a {{job_title}} who loved technology. Although {{genderSingular}} loved parts of {{genderPossessive}} job, {{genderSingular}} absolutely hated {{tedious_task}} and {{dirty_task}}. So, {{Name}} met with {{genderPossessive}} life mentor {{celebrity}} who told {{genderObjective}} to learn how to {{useless_skill}} with Thinkful. Thinkful didn't offer a course on {{useless_skill}} so {{genderSingular}} studied programming instead.</p>
+        <p>What a great decision! With {{genderPossessive}} new skills, {{Name}} built a(n) {{adjective}} robot named {{obnoxiuous_celebrity}} that not only loved {{dirty_task}} but did it {{huge_number}} times faster.</p>
         <button name="reset" type="submit">Start Over</button>
 	</section>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>

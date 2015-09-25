@@ -5,10 +5,11 @@ html {
 }
 
 body {
+	font-family: 'Karla', sans-serif;
 	text-align: center;
 }
 
-textarea:focus, input:focus{
+textarea:focus, input:focus, button:focus {
     outline: 0;
 }
 
@@ -26,6 +27,17 @@ button {
 
 button:hover {
 	opacity: 0.9;
+}
+
+.gender {
+	background-color: gray;
+	font-size: 1rem;
+}
+
+.gender-title {
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: #D24940;
 }
 
 header {
