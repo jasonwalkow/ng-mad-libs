@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="myApp">
 <head>
 	<meta charset="UTF-8">
 	<title>ngMadLibs</title>
 	<link href="css/style.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-animate.min.js"></script>
-    <script src="app.js"></script>
 </head>
-<body>
+<body ng-controller="MyCtrl">
 	<header>
 		<div class="smiley-box">
 			<img src="img/mad-lib-happy-face.png" class="smiley" alt="Smiley Face">
@@ -46,5 +43,8 @@
         <p>What a great decision! With his new skills, {{male_name}} built a(n) {{adjective}} robot named {{obnoxiuous_celebrity}} that not only loved {{dirty_task}} but did it {{huge_number}} times faster.</p>
         <button name="reset" type="submit">Start Over</button>
 	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-animate.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
