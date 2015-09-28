@@ -16,36 +16,38 @@
 			<h1>Automate This!</h1>
 		</div>
 	</header>
-	<section class="mad-libs-form">
+	<section class="mad-libs-form" ng-hide="checkValid()">
 		<button class="gender" ng-click="gender(input)">Toggle Gender</button>
 		<br>
-		<span class="gender-title">Gender: {{gender_title}}</span>
+		<span class="gender-title">Gender: {{info.gender_title}}</span>
 		<h2>Provide the following words:</h2>
-		<form name="madForm">
+		<form name="madForm" ng-submit="submitted=true; submit()" novalidate>
 		<div class="column">
-			<input type="text" placeholder="Name" name="Name" ng-model="Name" required>
-			<input type="text" placeholder="Job Title" name="job_title" ng-model="job_title" required>
-			<input type="text" placeholder="Tedious Task" name="tedious_task" ng-model="tedious_task" required>
+			<input type="text" placeholder="Name" name="Name" ng-model="info.Name" required>
+			<input type="text" placeholder="Job Title" name="job_title" ng-model="info.job_title" required>
+			<input type="text" placeholder="Tedious Task" name="tedious_task" ng-model="info.tedious_task" required>
 		</div>
 		<div class="column">
-			<input type="text" placeholder="Dirty Task" name="dirty_task" ng-model="dirty_task" required>
-			<input type="text" placeholder="Celebrity" name="celebrity" ng-model="celebrity" required>
-			<input type="text" placeholder="Useless Skill" name="useless_skill" ng-model="useless_skill" required>
+			<input type="text" placeholder="Dirty Task" name="dirty_task" ng-model="info.dirty_task" required>
+			<input type="text" placeholder="Celebrity" name="celebrity" ng-model="info.celebrity" required>
+			<input type="text" placeholder="Useless Skill" name="useless_skill" ng-model="info.useless_skill" required>
 		</div>
 		<div class="column">
-			<input type="text" placeholder="Obnoxious Celebrity" name="obnoxious_celebrity" ng-model="obnoxious_celebrity" required>
-			<input type="number" placeholder="Huge Number" name="huge_number" ng-model="huge_number" required>
-			<input type="text" placeholder="Adjective" name="adjective" ng-model="adjective" required>
+			<input type="text" placeholder="Obnoxious Celebrity" name="obnoxious_celebrity" ng-model="info.obnoxious_celebrity" required>
+			<input type="number" placeholder="Huge Number" name="huge_number" ng-model="info.huge_number" required>
+			<input type="text" placeholder="Adjective" name="adjective" ng-model="info.adjective" required>
 		</div>
+		<br>
+		<span class="error" ng-if="madForm.$submitted && madForm.$error.required">All fields are required!</span>
 		<div class="submit">
-			<button name="madForm" type="submit">Generate My MadLib</button>
+			<button name="madForm" type="submit" ng-click="checkValid()">Generate My MadLib</button>
 		</div>
 		</form>
 	</section>
-	<section class="mad-libs-text">
-		<p>{{Name}} was a {{job_title}} who loved technology. Although {{genderSingular}} loved parts of {{genderPossessive}} job, {{genderSingular}} absolutely hated {{tedious_task}} and {{dirty_task}}. So, {{Name}} met with {{genderPossessive}} life mentor {{celebrity}} who told {{genderObjective}} to learn how to {{useless_skill}} with Thinkful. Thinkful didn't offer a course on {{useless_skill}} so {{genderSingular}} studied programming instead.</p>
-        <p>What a great decision! With {{genderPossessive}} new skills, {{Name}} built a(n) {{adjective}} robot named {{obnoxiuous_celebrity}} that not only loved {{dirty_task}} but did it {{huge_number}} times faster.</p>
-        <button name="reset" type="submit">Start Over</button>
+	<section class="mad-libs-text" ng-show="hide">
+		<p>{{info.Name}} was a {{info.job_title}} who loved technology. Although {{info.genderSingular}} loved parts of {{info.genderPossessive}} job, {{info.genderSingular}} absolutely hated {{info.tedious_task}} and {{info.dirty_task}}. So, {{info.Name}} met with {{info.genderPossessive}} life mentor {{info.celebrity}} who told {{info.genderObjective}} to learn how to {{info.useless_skill}} with Thinkful. Thinkful didn't offer a course on {{info.useless_skill}} so {{info.genderSingular}} studied programming instead.</p>
+        <p>What a great decision! With {{info.genderPossessive}} new skills, {{info.Name}} built a(n) {{info.adjective}} robot named {{info.obnoxious_celebrity}} that not only loved {{info.dirty_task}} but did it {{info.huge_number}} times faster.</p>
+        <button name="reset" type="button" ng-click="reset()">Start Over</button>
 	</section>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-animate.min.js"></script>
