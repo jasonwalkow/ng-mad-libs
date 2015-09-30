@@ -11,8 +11,7 @@ angular.module('madLibsApp', [])
 		    genderPossessive: "his"
 		};
 
-
-    	$scope.checkValid = function() {
+    	$scope.submit = function() {
 		    if ($scope.madForm.$submitted && $scope.madForm.$valid && !($scope.madForm.$pristine)) {
 		      $scope.hide = true;
 		      return true;

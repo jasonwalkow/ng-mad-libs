@@ -16,12 +16,12 @@
 			<h1>Automate This!</h1>
 		</div>
 	</header>
-	<section class="mad-libs-form" ng-hide="checkValid()">
+	<section class="mad-libs-form" ng-hide="hide">
 		<button class="gender" ng-click="gender(input)">Toggle Gender</button>
 		<br>
 		<span class="gender-title">Gender: {{info.gender_title}}</span>
 		<h2>Provide the following words:</h2>
-		<form name="madForm" ng-submit="submitted=true; submit()" novalidate>
+		<form name="madForm" ng-submit="submit()" novalidate>
 		<div class="column">
 			<input type="text" placeholder="Name" name="Name" ng-model="info.Name" required>
 			<input type="text" placeholder="Job Title" name="job_title" ng-model="info.job_title" required>
@@ -40,7 +40,7 @@
 		<br>
 		<span class="error" ng-if="madForm.$submitted && madForm.$error.required">All fields are required!</span>
 		<div class="submit">
-			<button name="madForm" type="submit" ng-click="checkValid()">Generate My MadLib</button>
+			<button name="madForm" type="submit">Generate My MadLib</button>
 		</div>
 		</form>
 	</section>
