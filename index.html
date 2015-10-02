@@ -5,6 +5,7 @@
 	<title>ngMadLibs</title>
 	<link href='https://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href="css/style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
 </head>
 <body ng-controller="MyCtrl">
 	<header>
@@ -18,7 +19,6 @@
 	</header>
 	<section class="mad-libs-form" ng-hide="hide">
 		<button class="gender" ng-click="gender(input)">Toggle Gender</button>
-		<br>
 		<span class="gender-title">Gender: {{info.gender_title}}</span>
 		<h2>Provide the following words:</h2>
 		<form name="madForm" ng-submit="submit()" novalidate>
@@ -49,8 +49,7 @@
         <p>What a great decision! With {{info.genderPossessive}} new skills, {{info.Name}} built a(n) {{info.adjective}} robot named {{info.obnoxious_celebrity}} that not only loved {{info.dirty_task}} but did it {{info.huge_number}} times faster.</p>
         <button name="reset" type="button" ng-click="reset()">Start Over</button>
 	</section>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-animate.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

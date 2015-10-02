@@ -1,4 +1,4 @@
-angular.module('madLibsApp', [])
+angular.module('madLibsApp', ['ngAnimate'])
 	.controller('MyCtrl', ['$scope', function($scope) {
 	
 	    $scope.gender_title = 'Gender';

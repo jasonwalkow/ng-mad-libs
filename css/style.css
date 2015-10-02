@@ -22,7 +22,7 @@ button {
 	font-weight: bold;
 	color: #fff;
 	cursor: pointer;
-	margin: 2rem auto 1rem auto;
+	margin: 0rem auto 1rem auto;
 }
 
 button:hover {
@@ -32,12 +32,14 @@ button:hover {
 .gender {
 	background-color: gray;
 	font-size: 1rem;
+	margin-top: 0;
 }
 
 .gender-title {
 	font-size: 1.5rem;
 	font-weight: bold;
 	color: #D24940;
+	padding-left: 1rem;
 }
 
 header {
@@ -83,11 +85,14 @@ h1 {
 	background-color: #fff;
 	border-radius: 5px;
 	padding: 1rem;
+	-webkit-transition: 0.5s all ease-in-out;
+	transition: 0.5s all ease-in-out;
 }
 
 h2 {
 	font-size: 2rem;
-	margin-bottom: 0;
+	margin-bottom: -0.75rem;
+	margin-top: 0;
 }
 
 .column {
@@ -115,6 +120,8 @@ input:focus {
 	background-color: #fff;
 	border-radius: 5px;
 	padding: 1rem;
+	-webkit-transition: 0.5s all ease-in-out;
+	transition: 0.5s all ease-in-out;
 }
 
 .mad-libs-text p {
@@ -127,6 +134,50 @@ input:focus {
 	color: #DE3B30;
 	font-size: 1.5rem;
 	font-weight: bold;
+}
+
+/*================================
+           ANIMATIONS
+================================*/
+
+section.ng-hide-add,
+section.ng-hide-remove {
+  display: block !important;
+  width: 100% !important;
+  position: relative;
+  opacity: 1;
+}
+
+section.ng-hide-remove,
+section.ng-hide-add.ng-hide-add-active {
+  left: 150%;
+  opacity: 0;
+}
+
+section.ng-hide-remove.ng-hide-remove-active,
+section.ng-hide-add {
+  left: 0%;
+  opacity: 1;
+}
+
+section.ng-show-add,
+section.ng-show-remove {
+  display: block !important;
+  width: 100% !important;
+  position: relative;
+  opacity: 1;
+}
+
+section.ng-show-remove,
+section.ng-show-add.ng-show-add-active {
+  right: 150%;
+  opacity: 0;
+}
+
+section.ng-show-remove.ng-show-remove-active,
+section.ng-show-add {
+  right: 0%;
+  opacity: 1;
 }
 
 
